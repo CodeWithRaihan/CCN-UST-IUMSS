@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Notice Upload</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      padding: 40px;
+      background-image: url(image/concocation\ pic\ 2.jpg);
+    }
+   
+
+
+    .container {
+      max-width: 600px;
+      background: #fff;
+      padding: 30px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <div class="container">
+    <img src="image/ccn cover logo.png" alt="" width="600"><h2>Upload Admin Notice</h2>
+    <form action="/upload_notice" method="POST" enctype="multipart/form-data">
+      <label for="title">Notice Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter notice title" required>
+
+      <label for="description">Notice Description</label>
+      <textarea id="description" name="description" placeholder="Write the notice details..." required></textarea>
+
+      <label for="file">Attach File (PDF/DOC)</label>
+      <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.jpg,.jpeg" required>
+
+      <button type="submit">Upload Notice</button>
+    </form>
+  </div>
+ 
+
+</body>
+</html>
+

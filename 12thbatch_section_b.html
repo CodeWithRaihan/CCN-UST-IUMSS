@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background-color: #2c3e50;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #34495e;
+    }
+        .sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+    .main {
+      margin-left: 220px;
+      padding: 20px;
+    }
+
+    .student-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .student-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .student-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .student-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .student-card p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+    }
+
+    .has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #34495e;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  padding: 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+}
+
+.submenu li a:hover {
+  background-color: #3d566e;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+.student-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+      }
+
+      .student-card img:hover {
+      transform: scale(2);
+      z-index: 10;
+      position: relative;
+      }
+/* this part is for button for detais and contact info */
+.card-buttons {
+ margin-top: 10px;
+}
+
+.card-buttons button {
+ margin-right: 8px;
+ padding: 6px 12px;
+ font-size: 14px;
+cursor: pointer;
+ background-color: #2c3e50;
+ color: white;
+border: none;
+border-radius: 4px;
+transition: background-color 0.3s;
+}
+
+.card-buttons button:hover {
+background-color: #1a252f;
+}
+
+.card-info {
+ margin-top: 10px;
+ text-align: left;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+  <h2>Batches</h2>
+  <ul>
+    <li><a href="student.html"><strong>HOME</strong></a></li>
+    <li><a href="10thbatch.html">Batch 10</a></li>
+    <li><a href="11thbatch.html" class="active">Batch 11</a></li>
+    
+    <li class="has-submenu">
+      <a href="#">Batch 12</a>
+      <ul class="submenu">
+        <li><a href="12thbatch_section_a.html">Section A</a></li>
+        <li><a href="12thbatch_section_b.html">Section B</a></li>
+      </ul>
+    </li>
+    <li><a href="13thbatch.html" class="active">Batch 13</a></li>
+    <li class="has-submenu">
+      <a href="#">Batch 14</a>
+      <ul class="submenu">
+        <li><a href="14thbatch_section_a.html">Section A</a></li>
+        <li><a href="14thbatch_section_b.html">Section B</a></li>
+        <li><a href="14thbatch_section_c.html">Section c</a></li>
+      </ul>
+    </li>
+    <li><a href="15thbatch.html" class="active">Batch 15</a></li>
+    
+  </ul>
+</div>
+
+
+  <div class="main">
+    <h1>Student Profiles</h1>
+    <div class="student-grid">
+      <div class="student-card">
+        <img src="image/Md Mehedi Hasan.jpg" alt="Student 1">
+        <h3>Md Mehedi Hasan</h3>
+
+                <!-- Buttons -->
+<div class="card-buttons">
+ <button onclick="toggleInfo(this, 'details')">Details</button>
+<button onclick="toggleInfo(this, 'contact')">Contact Info</button>
+ </div>
+
+ <!-- Info sections -->
+ <div class="card-info details" style="display: none;">
+ <p style="color: black;">
+ Spring 2023<br>
+ ID: <br>
+ Semester: <br>
+Department: 
+ </p>
+</div>
+
+<div class="card-info contact" style="display: none;">
+ <p style="color: black;">
+Father's Name: <br>
+ Mother's Name: <br>
+ Mobile:  <br>
+ Email: <br>
+ Address: <br>
+ Whatsapp: <br>
+</p>
+</div>
+</div>
+
+      <div class="student-card">
+        <img src="image/Robiul Hossen Salman.jpg" alt="Student 2">
+        <h3>Robiul Hossen Salman </h3>
+
+                <!-- Buttons -->
+<div class="card-buttons">
+ <button onclick="toggleInfo(this, 'details')">Details</button>
+<button onclick="toggleInfo(this, 'contact')">Contact Info</button>
+ </div>
+
+ <!-- Info sections -->
+ <div class="card-info details" style="display: none;">
+ <p style="color: black;">
+ Spring 2023<br>
+ ID: <br>
+ Semester: <br>
+Department: 
+ </p>
+</div>
+
+<div class="card-info contact" style="display: none;">
+ <p style="color: black;">
+Father's Name: <br>
+ Mother's Name: <br>
+ Mobile:  <br>
+ Email: <br>
+ Address: <br>
+ Whatsapp: <br>
+</p>
+</div>
+</div>
+
+      <div class="student-card">
+        <img src="image/jerin afrose Nila.jpg" alt="Student 3">
+        <h3> jerin afrose Nila</h3>
+
+        <!-- Buttons -->
+<div class="card-buttons">
+ <button onclick="toggleInfo(this, 'details')">Details</button>
+<button onclick="toggleInfo(this, 'contact')">Contact Info</button>
+ </div>
+
+ <!-- Info sections -->
+ <div class="card-info details" style="display: none;">
+ <p style="color: black;">
+ Spring 2023<br>
+ ID: <br>
+ Semester: <br>
+Department: 
+ </p>
+</div>
+
+<div class="card-info contact" style="display: none;">
+ <p style="color: black;">
+Father's Name: <br>
+ Mother's Name: <br>
+ Mobile:  <br>
+ Email: <br>
+ Address: <br>
+ Whatsapp: <br>
+</p>
+</div>
+</div>
+
+       <div class="student-card">
+        <img src="image/Gopa Rani Sarker.jpg" alt="Student 4">
+        <h3>Gopa Rani Sarker</h3>
+
+                <!-- Buttons -->
+<div class="card-buttons">
+ <button onclick="toggleInfo(this, 'details')">Details</button>
+<button onclick="toggleInfo(this, 'contact')">Contact Info</button>
+ </div>
+
+ <!-- Info sections -->
+ <div class="card-info details" style="display: none;">
+ <p style="color: black;">
+ Spring 2023<br>
+ ID: <br>
+ Semester: <br>
+Department: 
+ </p>
+</div>
+
+<div class="card-info contact" style="display: none;">
+ <p style="color: black;">
+Father's Name: <br>
+ Mother's Name: <br>
+ Mobile:  <br>
+ Email: <br>
+ Address: <br>
+ Whatsapp: <br>
+</p>
+</div>
+</div>
+
+       <div class="student-card">
+        <img src="image/Asikur Rahaman.jpg" alt="Student 5">
+        <h3>Asikur Rahaman</h3>
+
+        <!-- Buttons -->
+<div class="card-buttons">
+ <button onclick="toggleInfo(this, 'details')">Details</button>
+<button onclick="toggleInfo(this, 'contact')">Contact Info</button>
+ </div>
+
+ <!-- Info sections -->
+ <div class="card-info details" style="display: none;">
+ <p style="color: black;">
+ Spring 2023<br>
+ ID: <br>
+ Semester: <br>
+Department: 
+ </p>
+</div>
+
+<div class="card-info contact" style="display: none;">
+ <p style="color: black;">
+Father's Name: <br>
+ Mother's Name: <br>
+ Mobile:  <br>
+ Email: <br>
+ Address: <br>
+ Whatsapp: <br>
+</p>
+</div>
+</div>
+
+       <div class="student-card">
+        <img src="image/Roksana Akter.jpg" alt="Student 6">
+        <h3>Roksana Akter</h3>
+
+               <!-- Buttons -->
+<div class="card-buttons">
+ <button onclick="toggleInfo(this, 'details')">Details</button>
+<button onclick="toggleInfo(this, 'contact')">Contact Info</button>
+ </div>
+
+ <!-- Info sections -->
+ <div class="card-info details" style="display: none;">
+ <p style="color: black;">
+ Spring 2023<br>
+ ID: <br>
+ Semester: <br>
+Department: 
+ </p>
+</div>
+
+<div class="card-info contact" style="display: none;">
+ <p style="color: black;">
+Father's Name: <br>
+ Mother's Name: <br>
+ Mobile:  <br>
+ Email: <br>
+ Address: <br>
+ Whatsapp: <br>
+</p>
+</div>
+</div>
+
+       <div class="student-card">
+        <img src="image/Shazia Amin.jpg" alt="Student 7">
+        <h3>Shazia Amin</h3>
+
+                <!-- Buttons -->
+<div class="card-buttons">
+ <button onclick="toggleInfo(this, 'details')">Details</button>
+<button onclick="toggleInfo(this, 'contact')">Contact Info</button>
+ </div>
+
+ <!-- Info sections -->
+ <div class="card-info details" style="display: none;">
+ <p style="color: black;">
+ Spring 2023<br>
+ ID: <br>
+ Semester: <br>
+Department: 
+ </p>
+</div>
+
+<div class="card-info contact" style="display: none;">
+ <p style="color: black;">
+Father's Name: <br>
+ Mother's Name: <br>
+ Mobile:  <br>
+ Email: <br>
+ Address: <br>
+ Whatsapp: <br>
+</p>
+</div>
+</div>
+      <!-- Add more student cards here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

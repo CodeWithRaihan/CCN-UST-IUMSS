@@ -1,0 +1,107 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IUMSS - Login</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  
+  <script>
+    function handleLoginRedirect(event) {
+      event.preventDefault();
+
+      const userType = document.getElementById("userType").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // === Alumni Login Check ===
+      if (userType === "alumni") {
+        if (email === "@mahi" && password === "iumss123") {
+          window.location.href = "alumni_info.html";
+        } else if (email === "tanveer@example.com" && password === "tanveer1234") {
+          window.location.href = "alumni_info2.html";
+        } else {
+          alert("❌ Invalid alumni credentials.");
+        }
+      }
+
+      // === Student Login Check ===
+      else if (userType === "student") {
+        if (email === "@raihan" && password === "iumss123") {
+          window.location.href = "dashboard_raihan.html";
+        } else if (email === "@rihan" && password === "iumss123") {
+          window.location.href = "s_rihan_dashboard.html";
+        }
+        else if (email === "@sojib" && password === "iumss123") {
+          window.location.href = "dashboard_sojib.html";
+        }
+
+        else if (email === "@sajeda" && password === "iumss123") {
+          window.location.href = "dashboard_sajeda.html";
+        }
+        else {
+          alert("❌ Invalid student credentials.");
+        }
+      }
+
+      // === Admin Login Check ===
+      else if (userType === "admin") {
+        if (email === "@admin" && password === "iumss123") {
+          window.location.href = "dashboard.html";
+        } else {
+          alert("❌ Invalid admin credentials.");
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class=>
+    <h1 class=>
+        <img src="image/ccn logo.jpg" alt="IUMSS Logo" class="header-logo">
+        CCN University of Science & Technology
+    </h1>
+    
+  </header>
+  <div class="login-container">
+    <!-- <h2>IUMSS Login</h2> -->
+    <form onsubmit="handleLoginRedirect(event)">
+      <label for="userType">Login as:</label>
+      <select id="userType">
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+        <option value="alumni">Alumni</option>
+      </select>
+      <label for="text">Username</label>
+      <input type="text" id="email" placeholder="Enter username" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password" required>
+       <!-- this part is after edit for forget password -->
+       <div class="remember-me">
+        <input type="checkbox" id="rememberMe" name="rememberMe">
+        <label for="rememberMe">Remember Me</label>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p class="register-link">
+      New student? <a href="register.html">Register here</a>
+    </p>
+    <p class="forget-pass" style="text-align: center;">
+    <a href="register.html">Forgot password?</a>
+    </p>
+  </div>
+  <div class="social-media">
+    <h3>Follow Us</h3>
+    <div class="icons">
+      <a href="https://www.facebook.com/ccnust2014/"><img src="image/Facebook_icon.png" alt="Facebook" /></a>
+      <a href="#"><img src="image/youtube-icon.png" alt="youtube" /></a>
+      <a href="#"><img src="image/x-icon.avif" alt="Twitter" /></a>
+      <a href="#"><img src="image/instagram_icon.jpg" alt="Instagram" /></a>
+      <a href="#"><img src="image/LinkedIn_icon.png" alt="LinkedIn" /></a>
+    </div>
+  </div>
+</body>
+</html>

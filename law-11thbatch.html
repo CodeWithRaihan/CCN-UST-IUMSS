@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background-color: #2c3e50;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #34495e;
+    }
+        .sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+    .main {
+      margin-left: 220px;
+      padding: 20px;
+    }
+
+    .student-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .student-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .student-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .student-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .student-card p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+  <h2>Batches</h2>
+  <ul>
+    <li><a href="student.html"><strong>HOME</strong></a></li>
+    <li><a href="law-11thbatch.html">Batch 11</a></li>
+    <li><a href="law-12thbatch.html">Batch 12</a></li>
+    <li><a href="law-13thbatch.html">Batch 13</a></li>
+    <li><a href="law-14thbatch.html">Batch 14</a></li>
+  </ul>
+</div>
+
+
+  <div class="main">
+    <h1>Student Profiles</h1>
+    <div class="student-grid">
+      <div class="student-card">
+        <img src="student1.jpg" alt="Student 1">
+        <h3>John Doe</h3>
+        <p>Batch A<br>ID: 001</p>
+      </div>
+      <div class="student-card">
+        <img src="student2.jpg" alt="Student 2">
+        <h3>Jane Smith</h3>
+        <p>Batch B<br>ID: 002</p>
+      </div>
+      <div class="student-card">
+        <img src="student3.jpg" alt="Student 3">
+        <h3>Alex Khan</h3>
+        <p>Batch A<br>ID: 003</p>
+      </div>
+      <!-- Add more student cards here -->
+    </div>
+  </div>
+
+</body>
+</html>

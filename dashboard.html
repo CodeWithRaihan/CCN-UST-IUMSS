@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - IUMSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.logout-btn {
+    background-color:#005577;
+    padding: 10px 20px;
+    margin-left: 1100px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    
+} 
+
+ .logout-btn:hover {
+    background-color: #e73737;
+} 
+    /*main content*/
+      .container {
+    display: flex;
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.content {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #2e5444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+      <header>
+        <h1>
+            <img src="image/ccn logo.jpg" alt="IUMSS Logo" class="header-logo">
+            CCN Admin Dashboard  
+        </h1>
+    </header>
+    <nav class="sidebar">
+        <ul>
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Home</a></li>
+                    <li><a href="AdminNotice.html">Notice</a></li>
+                    <!-- <li><a href="#">Attendances</a></li> -->
+                    <li><a href="adminfacilities.html">Faculties</a></li>
+                    <!-- <li><a href="all_course.html">All Courses</a></li>  -->
+                    <li><a href="index.html" class="logout">Logout</a></li>
+                    
+                </ul>
+            </nav>
+            
+        </ul>
+    </nav>
+    <main class="content">
+            <h2>Welcome to the Admin Section</h2>
+            
+            <div class="card-container">
+                <div class="card">
+                   <h3><a href="student.html"
+                        style="text-decoration: none; color: inherit;">Students</a></h3>
+                       <p>Runing Student: 1200</p>
+                       <p>Graduate Student: 780</p>
+                </div>
+                <div class="card">
+                    <h3><a href="dashboard_result.html"
+                        style="text-decoration: none; color: inherit;">Result</a></h3>
+                       <p>Runing Student: 1200</p>
+                </div>
+                <div class="card">
+                    <h3><a href="dashboard_attendance.html"
+                     style="text-decoration: none; color: inherit;">Attendances</a></h3>
+                    <p>Runing Student: 1200</p>
+                </div>
+                
+            </div>
+    </main>
+</body>
+</html>
