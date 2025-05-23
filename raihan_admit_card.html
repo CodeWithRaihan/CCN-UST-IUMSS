@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admit Card - IUMSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+    }
+
+    .admit-card {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: white;
+      padding: 30px;
+      border: 2px solid #0077cc;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: #0077cc;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 0;
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    .print-section {
+      border-style: solid;
+      border-color: black;
+      border-width: 1px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      background-color: white;
+    }
+
+    .print-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .print-table th,
+    .print-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    /* Hide print-only content by default */
+    .print-only {
+      display: none;
+    }
+
+    /* Show only .print-section in print */
+    @media print {
+      .screen-only {
+        display: none !important;
+      }
+
+      .print-only {
+        display: block !important;
+      }
+
+      button {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Normal screen content -->
+  <div class="screen-only">
+    <div class="admit-card">
+      <h2>🎟️ Admit Card</h2>
+
+      <hr>
+
+      <h3>📝 Midterm Exam</h3>
+      <p><strong>Exam Center:</strong> CCN-UST</p>
+      <p><strong>Room No</strong> 3107</p>
+      <p><strong>Exam Date:</strong> 25 April 2025</p>
+
+      <hr>
+
+      <h3>🧾 Final Exam</h3>
+      <p><strong>Exam Center:</strong> CCN-UST</p>
+      <p><strong>Room No</strong> 3107</p>
+      <p><strong>Exam Date:</strong> 12 May 2025</p>
+
+      <button onclick="window.print()">🖨️ Print Admit Card</button>
+    </div>
+  </div>
+
+  <!-- Print-only content -->
+  <div class="print-only">
+    <div class="print-section">
+      <h2>🎟️ Final Exam Admit Card</h2>
+      <div class="img-1">
+        <img align="right" src="image/Raihanul islam.jpeg" alt="Student Photo" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 1px solid #333;" />
+      </div>
+      <br>
+      <p><strong>Name:</strong> Raihanul Islam</p>
+      <p><strong>ID:</strong> 111123007</p>
+      <p><strong>Exam:</strong> Midterm & Final</p>
+      <p><strong>Exam Center:</strong> CCN-UST</p>
+      <p><strong>Room No:</strong> 3107</p>
+
+      <table class="print-table">
+        <thead>
+          <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Date of Exam</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CSE301</td>
+            <td>Data Structures</td>
+            <td>25 April 2025</td>
+          </tr>
+          <tr>
+            <td>CSE302</td>
+            <td>Database Systems</td>
+            <td>12 May 2025</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="display: flex; justify-content: space-between; margin-top: 60px;">
+        <div style="text-align: center;">
+          <p><em>Raihanul</em></p>
+          <p>_______________________</p>
+          <p><strong>Student's Signature</strong></p>
+            <br>
+            <br>
+        </div>
+        <div style="text-align: center;">
+          <p><em>Controller of Examination</em></p>
+          <p>_______________________</p>
+          <p><strong>CoE Signature</strong></p>
+           <br>
+           <br> 
+        </div>
+      </div>
+      <strong><em style="color: red;">* This is a computer generated admitcard signature doesn't mandatory.</em></strong>
+    </div>
+  </div>
+
+</body>
+</html>

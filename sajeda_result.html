@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Results - IUMSS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .academic-heading {
+      margin: 0;
+    }
+
+    .chart-container {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    canvas#cgpaChart {
+      width: 100% !important;
+      height: auto !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="image/ccn logo.jpg" alt="IUMSS Logo" class="header-logo">IUMSS - Student Result</h1>
+  </header>
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="dashboard_sajeda.html" class="active"><small>Profile</small></a></li>
+      <li><a href="all_course.html"><small>All Courses</small></a></li> 
+      <li><a href="sajeda_semester_registration.html"><small>Semester Registration</small></a></li>
+      <li><a href="sajeda_tuitionfees.html"><small>Payment</small></a></li> 
+      <li><a href="sajeda_attendance.html"><small>Attendance</small></a></li>
+      <li><a href="sajeda_admit_card.html"><small>Admitcard</small></a></li> 
+       <li><a href="sajeda_result.html"><small>Result</small></a></li>
+       <li><a href="sajeda_facilities.html"><small>Faculties</small></a></li>
+       <li><a href="sajeda_emergency_contact.html"><small>Emergency Contact</small></a></li>
+       <li><a href="index.html" class="logout"><small>LogOut</small></a></li>
+   </ul>
+  </nav>
+
+  <main class="content">
+    <!-- Total CGPA -->
+    <h2  style="text-align: center;">Academic Result</h2>
+     <h3 style="text-align: center;">Total CGPA: <span>3.68</span></h3>
+     <hr>
+      <h3>Total CGPA: <span>3.85</span></h3>
+    </div>
+
+    <h2>📈 CGPA Progress Chart</h2>
+    <div class="chart-container">
+      <canvas id="cgpaChart"></canvas>
+    </div>
+
+    <script>
+      const ctx = document.getElementById('cgpaChart').getContext('2d');
+      const cgpaChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['1st Sem', '2nd Sem', '3rd Sem', '4th Sem', '5th Sem'],
+          datasets: [{
+            label: 'CGPA',
+            data: [3.38, 3.48, 3.78, 3.68, 3.63],
+            fill: false,
+            borderColor: '#0077cc',
+            backgroundColor: '#0077cc',
+            tension: 0.2,
+            pointRadius: 5,
+            pointBackgroundColor: '#0077cc'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: false,
+              min: 2.5,
+              max: 4.0
+            }
+          }
+        }
+      });
+    </script>
+
+        <!-- Semester 1 -->
+        <h3>📘 1st Semester Total Cradit:9, CGPA:2.91</h3>
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Course Teacher</th>
+                    <th>Credit</th>
+                    <th>Subject CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Structured Programming</td><td>Mahbub Sir</td><td>3.0</td><td>2.70</td></tr>
+                <tr><td>Calculus I</td><td>Dr. Nasima</td><td>3.0</td><td>3.00</td></tr>
+                <tr><td>Physics</td><td>Hasan Sir</td><td>3.0</td><td>3.15</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Semester 2 -->
+        <h3>📘 2nd Semester Total Cradit:9, CGPA:3.35</h3>
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Course Teacher</th>
+                    <th>Credit</th>
+                    <th>Subject CGPA</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr><td>Data Structure</td><td>Alif Sir</td><td>3.0</td><td>3.70</td></tr>
+                <tr><td>Calculus II</td><td>Dr. Nasima</td><td>3.0</td><td>3.65</td></tr>
+                <tr><td>Electronic Devices & Circuits</td><td>Sayma Ma'am</td><td>3.0</td><td>3.85</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Semester 3 -->
+        <h3>📘 3rd Semester Total Cradit:9, CGPA:3.50</h3>
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Course Teacher</th>
+                    <th>Credit</th>
+                    <th>Subject CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Linear Algebra</td><td>Tamim Sir</td><td>3.0</td><td>3.60</td></tr>
+                <tr><td>Digital Logic Design</td><td>Al Amin Sir</td><td>3.0</td><td>3.75</td></tr>
+                <tr><td>Database Management System</td><td>Shafkat Sir</td><td>3.0</td><td>3.80</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Semester 4 -->
+        <h3>📘 4th Semester Total Cradit:9, CGPA:3.55</h3>
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Course Teacher</th>
+                    <th>Credit</th>
+                    <th>Subject CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Microprocessor & Embedded System</td><td>Sayma Ma'am</td><td>2.0</td><td>3.90</td></tr>
+                <tr><td>Fourier Analysis</td><td>OLIOLLA</td><td>3.0</td><td>3.75</td></tr>
+                <tr><td>System Analysis and Design</td><td>Rafiq Sir</td><td>3.0</td><td>3.70</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Semester 5 -->
+        <h3>📘 5th Semester Total Cradit:9, Running</h3>
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>Course Title</th>
+                    <th>Course Teacher</th>
+                    <th>Credit</th>
+                    <th>Subject CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Data Communication</td><td>Aftab Uddin Alif</td><td>3.0</td><td>3.50</td></tr>
+                <tr><td>Introduction to Programming</td><td>Shomon Sir</td><td>3.0</td><td>3.60</td></tr>
+                <tr><td>Artificial Intelligence</td><td>Sumon Sir</td><td>3.0</td><td>3.80</td></tr>
+            </tbody>
+        </table>
+        <hr />
+    </main>
+</body>
+</html>

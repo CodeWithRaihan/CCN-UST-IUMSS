@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Rabiul Sir</title>
+ <link rel="stylesheet" href="styles.css">
+ <style>
+ .profile {
+ display: flex;
+ align-items: flex-start;
+ gap: 20px;
+}
+.buttons {
+ margin-top: 20px;
+}
+
+.buttons button {
+ margin-right: 10px;
+ padding: 8px 16px;
+ font-size: 16px;
+ cursor: pointer;
+ }
+
+.section {
+display: none;
+ margin-top: 20px;
+}
+
+.section.active {
+display: block;
+}
+</style>
+</head>
+<body>
+ <header>
+<h1>Faculty Profile - Aftab Uddin Alif</h1>
+</header>
+
+ <main class="content">
+ <div class="profile">
+ <img src="image/Rabiol sir.png" alt="Aftab Uddin Alif" width="200" height="200">
+<div class="info">
+<div class="buttons">
+<button onclick="showSection('details')">Details</button>
+<button onclick="showSection('education')">Education</button>
+<button onclick="showSection('research')">Research Area</button>
+ </div>
+<div id="details" class="section">
+<p><strong>Name:</strong> Rabiol Amin</p>
+<p><strong>Designation:</strong> Lecturer, CSE</p>
+<p><strong>Department:</strong> Computer Science & Engineering</p>
+ <p><strong>Email:</strong> rabiol@ccnust.ac.bd</p>
+ <p><strong>Phone:</strong> 01234567891</p>
+ <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/rabiol</a></p>
+<p><strong>Office Room:</strong> CSE Building, Room 201</p>
+</div>
+
+<div id="education" class="section">
+<p><strong>Education</strong><br>
+B.Sc. in CSE, Port City International University <br>
+ HSC in Science, Chittagong Govt. College <br>
+  SSC in Science, Rahamania High School</p> </div>
+
+<div id="research" class="section">
+<p><strong>Research Area</strong> <br>
+     Machine Learning <br>
+    Artificial Intelligence <br>
+Internet of Things</p>
+</div>
+</div>
+ </div>
+ </main>
+
+<script>
+function showSection(id) {
+ const sections = document.querySelectorAll('.section');
+sections.forEach(section => {
+ section.classList.remove('active');
+ });
+document.getElementById(id).classList.add('active');
+}
+ </script>
+</body>
+</html>

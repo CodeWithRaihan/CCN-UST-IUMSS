@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuition Fees - IUMSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>IUMSS - Tuition Fees</h1>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="dashboard_sajeda.html" class="active"><small>Profile</small></a></li>
+            <li><a href="all_course.html"><small>All Courses</small></a></li> 
+            <li><a href="sajeda_semester_registration.html"><small>Semester Registration</small></a></li>
+            <li><a href="sajeda_tuitionfees.html"><small>Payment</small></a></li> 
+            <li><a href="sajeda_attendance.html"><small>Attendance</small></a></li>
+            <li><a href="sajeda_admit_card.html"><small>Admitcard</small></a></li> 
+             <li><a href="sajeda_result.html"><small>Result</small></a></li>
+             <li><a href="facilities.html"><small>Faculties</small></a></li>
+             <li><a href="sajeda_emergency_contact.html"><small>Emergency Contact</small></a></li>
+             <li><a href="index.html" class="logout"><small>LogOut</small></a></li>
+         </ul>
+    </nav>
+
+    <main class="content">
+        <h2>Tuition Fee Details</h2>
+        <table class="result-table">
+            <thead>
+                <tr>
+                    <th>Tuition Fee</th>
+                    <th>Waiver</th>
+                    <th>Due</th>
+                    <th>Registration Fee</th>
+                    <th>Mid Term Fee</th>
+                    <th>Total Paid</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>30,000</td>
+                    <td>25%</td>
+                    <td>5,000</td>
+                    <td>3,000</td>
+                    <td>7,000</td>
+                    <td>35,000</td>
+                    
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>paid</td>
+                    <td>paid</td>
+                    <td>paid</td>
+                    <td>paid</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--payment system-->
+        <section class="payment-section">
+    <h3>Make an Online Payment</h3>
+    <form class="payment-form">
+        <label for="payment-method">Choose Payment Method:</label>
+        <!--modifide version from here-->
+        <div class="payment-options">
+    <p>Select Payment Method:</p>
+    <div class="payment-methods">
+        <label class="1h">
+            <input type="radio" name="payment-method" value="bkash" required>
+           <a href="https://www.bkash.com/" target="_blank"> <img src="image/bkash_logo.png" alt="bKash"></a>
+        </label>
+        <label>
+            <input type="radio" name="payment-method" value="nagad">
+            <a href="https://nagad.com.bd/" target="_blank"><img src="image/nagad_logo.png" alt="Nagad"target="_blank"></a>
+        </label>
+        <label>
+            <input type="radio" name="payment-method" value="rocket">
+            <a href="https://www.dutchbanglabank.com/rocket/rocket.html" target="_blank"><img src="image/roket_logo.png" alt="Rocket"></a>
+        </label>
+        <label>
+            <input type="radio" name="payment-method" value="visa">
+            <a href="https://www.visaonline.com/login/" target="_blank"><img src="image/Visalogo.jpg" alt="Visa"  ></a>
+        </label>
+    </div>
+</div>
+        <label for="transaction-id">Transaction ID / Card Number:</label>
+        <input type="text" id="transaction-id" name="transaction-id" placeholder="Enter transaction ID or card number" required>
+
+        <label for="amount">Amount (BDT):</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+        <button type="submit">Pay Now</button>
+    </form>
+</section>
+
+    </main>
+</body>
+</html>
